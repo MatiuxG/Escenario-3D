@@ -73,7 +73,6 @@
     <Compile Include="Assets\Destroyed_city_FREE\Standard Assets\Water (Pro Only)\Sources\Scripts\Water.cs" />
     <Compile Include="Assets\Destroyed_city_FREE\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\WhiteCity\Textures\Other\Offer\LightingTools_Offer.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\KajamansRoads\FileNamesDescription.txt" />

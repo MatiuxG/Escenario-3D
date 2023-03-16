@@ -22,6 +22,10 @@ public class CharacterAnimBasedMovement : MonoBehaviour
     [Range(0, 1f)]
     public float StopAnimTime = 0.15f;
 
+    [SerializeField]
+    private float JumpHorizontalSpeed;
+
+
     private Ray wallRay = new Ray();
     private float Speed;
     private Vector3 desiredMoveDirection;
@@ -29,8 +33,7 @@ public class CharacterAnimBasedMovement : MonoBehaviour
     private Animator animator;
     private bool mirrorIdle;
     private bool turn180;
-    private bool isJumping;
-    private bool isGrouded;
+    bool IsGrounded;
 
 
     void Start()
@@ -39,8 +42,11 @@ public class CharacterAnimBasedMovement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+
     public void moveCharacter(float hInput, float vInput, Camera cam, bool jump, bool dash)
     {
+     
+
         //Calculate the Input Magnitude
         Speed = new Vector2(hInput, vInput).normalized.sqrMagnitude;
 
@@ -56,6 +62,7 @@ public class CharacterAnimBasedMovement : MonoBehaviour
             animator.SetFloat(motionParam, Speed, StartAnimTime, Time.deltaTime);
             Vector3 forward = cam.transform.forward;
             Vector3 right = cam.transform.right;
+            
 
             forward.y = 0f;
             right.y = 0f;
@@ -87,14 +94,37 @@ public class CharacterAnimBasedMovement : MonoBehaviour
             animator.SetBool(mirrorIdleParam, mirrorIdle);
             animator.SetFloat(motionParam, Speed, StopAnimTime, Time.deltaTime);
         }
+        
 
+
+
+
+
+        if (characterController.isGrounded)
+        {
+            animator.SetBool("IsGrounded", true);
+            IsGrounded = true;
+            animator.SetBool("IsJumping", false);
+            animator.SetBool("IsFalling", false);
+        }
+        else
+        {
+            animator.SetBool("IsGrounded", false);
+            animator.SetBool("IsJumping", false);
+            animator.SetBool("IsFalling", true);
+            IsGrounded = false;
+        }
         if (jump)
         {
-            Speed = -0.5f;
-            isJumping = true;
+            JumpHorizontalSpeed = 0.3f;
+            desiredMoveDirection.y = JumpHorizontalSpeed; 
+            characterController.Move(desiredMoveDirection);
+            animator.SetBool("IsGrounded", false);
             animator.SetBool("IsJumping", true);
+            animator.SetBool("IsFalling", false);
+            IsGrounded = false;
         }
-       
+
     }
 
     private void OnAnimatorIK(int layerIndex)

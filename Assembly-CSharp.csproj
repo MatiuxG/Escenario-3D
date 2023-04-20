@@ -60,11 +60,13 @@
     <Compile Include="Assets\Scripts\BoredBehavior.cs" />
     <Compile Include="Assets\Invector-3rdPersonController_LITE\3D Models\Others\HealthItem\vAnimateUV.cs" />
     <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vComment.cs" />
+    <Compile Include="Assets\Scripts\TimelineActivator.cs" />
     <Compile Include="Assets\Scripts\CharacterAnimBasedMovement.cs" />
     <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonAnimator.cs" />
     <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonInput.cs" />
     <Compile Include="Assets\Scripts\PlayerTPSController.cs" />
     <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vPickupItem.cs" />
+    <Compile Include="Assets\Shaders\PostRenderer.cs" />
     <Compile Include="Assets\WhiteCity\Textures\Other\Offer\ALIyerEdonAssets_Lighting.cs" />
     <Compile Include="Assets\Scripts\InputData.cs" />
     <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonController.cs" />
@@ -75,16 +77,49 @@
     <Compile Include="Assets\WhiteCity\Textures\Other\Offer\LightingTools_Offer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Shaders\CircleOnTerrain.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Shaders\VHSeffect.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\KajamansRoads\FileNamesDescription.txt" />
+    <None Include="Assets\Shaders\Flag.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\Shaders\Jelly.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Invector-3rdPersonController_LITE\README_Basic.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Shaders\BurningPaper.shader" />
     <None Include="Assets\KajamansRoads\Free\ReadMe.txt" />
+    <None Include="Assets\Shaders\Outline.shader" />
     <None Include="Assets\Destroyed_city_FREE\Shaders\AlphaTest-DiffuseDoubleSide.shader" />
+    <None Include="Assets\Shaders\Moss.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Shaders\Blur.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Shaders\ElectricArc.shader" />
     <None Include="Assets\_ApocalypticVehiclesPack\SpecGrayscaleGlassSF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Abandoned_Asylum\Read_me.txt" />
+    <None Include="Assets\Shaders\Cut.shader" />
     <None Include="Assets\Destroyed_city_FREE\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\POLYGON city pack\Read_me.txt" />
+    <None Include="Assets\Shaders\Bacteria.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Destroyed_city_FREE\Destroyed_city_FREE_Info.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\_ApocalypticVehiclesPack\SpecGrayscaleSF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Shaders\PseudoRandom.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

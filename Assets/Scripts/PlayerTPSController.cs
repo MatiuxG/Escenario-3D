@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerTPSController : MonoBehaviour
 {
     public Camera cam;
+    public UnityEvent onInteractionInput;
     private InputData input;
     private CharacterAnimBasedMovement characterMovement;
 
+    public bool OnInteractionZone { get; set; }
     void Start()
     {
         characterMovement = GetComponent<CharacterAnimBasedMovement>();
@@ -18,7 +21,16 @@ public class PlayerTPSController : MonoBehaviour
         // Get input from player
         input.getInput();
 
-        // Apply input to character
-        characterMovement.moveCharacter(input.hMovement, input.vMovement, cam, input.jump, input.dash);
+  
+
+        if (OnInteractionZone)
+        {
+            onInteractionInput.Invoke();
+        }
+        else
+        {
+            // Apply input to character
+            characterMovement.moveCharacter(input.hMovement, input.vMovement, cam, input.jump, input.dash);
+        }
     }
 }
